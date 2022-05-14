@@ -107,6 +107,8 @@ public class MergeContact_TestLeafWebpageWindowsAndAlerts {
 		} 
 		driver.switchTo().window(window1);
 		driver.findElement(By.xpath("//a[@class='buttonDangerous']")).click();
+		Alert alert= driver.switchTo().alert();
+		alert.accept();
 		String title = driver.getTitle();
 		System.out.println(title);
 		if(title.equals("View Contact | opentaps CRM"))
